@@ -25,4 +25,10 @@ root@ubuntu:~$ curl http://localhost:8085
 </body>
 </html>
 
-## Explicação ...
+## Explicação 
+A diferença é que nginx:alpine é a imagem usada como base para criar o contêiner, enquanto Estoque é o nome dado ao contêiner que foi criado a partir dessa imagem.
+
+nginx:alpine → é a imagem do Nginx, uma versão mais leve baseada no Alpine Linux.
+Estoque → é o contêiner em execução, criado usando essa imagem.
+
+O mapeamento 8085:80 serviu para ligar a porta 8085 do computador à porta 80 do contêiner. Assim, quando você acessa localhost:8085, a requisição é direcionada para o Nginx dentro do contêiner, que está funcionando na porta 80.
